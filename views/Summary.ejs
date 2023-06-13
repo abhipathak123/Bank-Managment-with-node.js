@@ -1,0 +1,75 @@
+<html>
+  <%-include('Nav')-%>
+  <body>
+    <div class="container">
+      <div class="col-md-12">
+        <center>
+          <h1>Summary Page</h1>
+        </center>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <h3>Account Details</h3>
+          <% if (detail.length > 0) { %>
+          <table class="table table-dark table-hover table-striped">
+            <thead>
+              <tr>
+                <th>Account Number</th>
+                <th>Pin</th>
+                <th>Name</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% detail.map((item) => { %>
+              <tr>
+                <td><%= item.acno %></td>
+                <td><%= item.pin %></td>
+                <td><%= item.name %></td>
+              </tr>
+              <% }) %>
+            </tbody>
+          </table>
+          <% } else { %>
+          <p>No account details found.</p>
+          <% } %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <h3>Transaction Details</h3>
+          <% if (data.length > 0) { %>
+          <table class="table table-dark table-hover table-striped">
+            <thead>
+              <tr>
+                <th>Description</th>
+                <th>Amount</th>
+                <th>Date</th>
+                <th>Time</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% data.map((item) => { %>
+              <tr>
+                <td><%= item.description %></td>
+                <td><%= item.amount %></td>
+                <td><%= item.date %></td>
+                <td><%= item.time %></td>
+              </tr>
+              <% }) %>
+            </tbody>
+          </table>
+          <% } else { %>
+          <p>No transaction details found.</p>
+          <% } %>
+        </div>
+      </div>
+      <div class="col-12">
+        <center>
+          <a href="/"
+            ><button type="button" class="btn btn-success">Get Summary</button>
+          </a>
+        </center>
+      </div>
+    </div>
+  </body>
+</html>

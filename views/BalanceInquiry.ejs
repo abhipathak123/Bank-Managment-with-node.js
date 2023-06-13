@@ -1,0 +1,71 @@
+<html>
+  <%-include('Nav')-%>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+          <div class="">
+            <div class="card-body p-5">
+              <form>
+                <h1 class="font-weight-light text-center mb-5">
+                  Balance Inquiry Page
+                </h1>
+                <div class="form-group row mb-3">
+                  <label
+                    class="col-sm-4 col-form-label"
+                    style="color: #212529; font-weight: bold"
+                  >
+                    Enter Account Number
+                  </label>
+                  <div class="col-sm-8">
+                    <input
+                      type="text"
+                      name="ac"
+                      class="form-control"
+                      placeholder="Account Number"
+                    />
+                  </div>
+                </div>
+                <div class="form-group row mb-3">
+                  <label
+                    class="col-sm-4 col-form-label"
+                    style="color: #212529; font-weight: bold"
+                  >
+                    Enter Pin
+                  </label>
+                  <div class="col-sm-8">
+                    <input
+                      name="pn"
+                      placeholder="Enter Pin"
+                      type="number"
+                      class="form-control"
+                    />
+                  </div>
+                </div>
+                <div class="form-group row mb-5"></div>
+
+                <div class="text-center">
+                  <input
+                    type="submit"
+                    value="Get Summary"
+                    name="submit"
+                    class="btn btn-primary btn-lg px-5 py-3"
+                  />
+                </div>
+                <div class="row">
+                  <div class="row mb-3">
+                    <div class="col-sm-10">
+                      <h3><%= msg %></h3>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-2"></div>
+      </div>
+    </div>
+  </body>
+</html>
